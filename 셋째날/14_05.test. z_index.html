@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{width: 100px; height: 100px; position: fixed} 
+        .red{z-index:3; background-color: red; left: 50px; top: 50px;}
+        .green{z-index:99999; background-color: green; left: 0px; top: 0px;}
+        .blue{background-color: blue;}  /*제트인덱스는 무조건 값만큼 위로가게함. 엄청큰거 넣으면 젤위에. 근데 너무큰거넣으면 문자로 인식을함.*/ /*픽스나 ab는 부모자식도 못알아봄.ㅇ"ㅒ는 맘대ㅗㄹ움직일수있음
+        */
+    </style>
+</head>
+<body>
+    <div class="box red"></div>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+</body>
+</html>
