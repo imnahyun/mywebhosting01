@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹 표준 레이아웃 실습</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anuphan&family=Bebas+Neue&family=Lemon&family=Rubik+Pixels&family=Sedgwick+Ave+Display&family=Tilt+Prism&family=Ubuntu:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        /*브라우저별로 똑같은 화면이 나오게 하는 css*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'times new roman', times, serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            border: 0;
+        }
+    </style>
+    <style>
+#title{
+    font-family: 'Anuphan', sans-serif;
+}
+
+    </style>
+</head>
+
+<body>
+    <header id="main_header">
+        <div id="title">
+            <h1>rint development</h1>
+            <h2>html5+css3 basic</h2>
+        </div>
+        <nav id="main_gnb">
+            <ul>
+
+
+            </ul>
+        </nav>
+        <nav id="main_lnb">
+            <ul>
+                <li><a href="#">html5</a></li>
+                <li><a href="#">css3</a></li>
+                <li><a href="#">javascript</a></li>
+                <li><a href="#">jquery</a></li>
+                <li><a href="#">node.js</a></li>
+
+            </ul>
+        </nav>
+
+    </header>
+    <div id="content">
+        <section id="main_section">
+            <article class="main_article">
+                <h1>Lorem ipsum dolor sit amet.</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore, quod.</p>
+            </article>
+            <article class="main_article">
+                <h1>Lorem ipsum dolor sit amet.</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, debitis.</p>
+            </article>
+            <article class="main_article">
+                <h1>Lorem ipsum dolor sit amet.</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, debitis.</p>
+            </article>
+        </section>
+
+        <aside id="main_aside">
+            <div class="tab_item">
+                <ul>
+                    <li><a href="#">
+                            <div class="thumbnail">
+                                <img src="image.png">
+                            </div>
+                            <div class="" description>
+                                <strong>html5 canvas</strong>
+                                <p>2012-03-15</p>
+                            </div>
+                        </a></li>
+
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+    <footer id="main_footer">
+        <h3></h3>
+
+    </footer>
+</body>
+
+</html>
