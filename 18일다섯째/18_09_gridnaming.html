@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 1fr 200px 1fr;
+            grid-template-rows: 50px 1fr;
+            grid-template-areas: 
+            'header header'
+            'aside section'
+            'footer footer'; /*쌍따옴표아니고 ''임*/   /*웹페이지 만들때 이미지가 많으면 과부화걸려서 sprite를 써서 이미지가있으면 조금씩 잘라서 쓴다.*/
+        }
+        #container>div{
+            border: 1px solid darkgreen;
+            background-color: aqua;
+            overflow: hidden
+        }
+        .header{grid-area: header;} /*그리도에어리어는 이름짓는거다*/
+        .aside{grid-area: aside;}
+        .section{grid-area: section;}
+        .footer{grid-area: footer;}
+    </style>
+</head>
+
+<body>
+    <div id="container">
+       <div class="header"><h1>header</h1></div>
+       <div class="aside"><h1>aside</h1></div>
+       <div class="section"><h1>section</h1></div>
+       <div class="footer"><h1>footer</h1></div>
+
+    </div>
+</body>
+
+</html>
