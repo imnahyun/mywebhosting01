@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="roto">로또 번호를 나오게 해봅시다~</button>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+
+    <script>
+let rototo = document.querySelector('#roto');
+let h1Tags = document.querySelectorAll('h1');
+
+function getRandomNumber() {
+  return Math.floor(Math.random() * 45) + 1;
+}
+
+function generateLottoNumbers() {
+  const lottoNumbers = [];
+  while (lottoNumbers.length < 6) {
+    const number = getRandomNumber();
+    if (!lottoNumbers.includes(number)) {
+      lottoNumbers.push(number);
+    }
+  }
+  return lottoNumbers;
+}
+
+rototo.addEventListener('click', function() {
+  const numbers = generateLottoNumbers();
+  for (let i = 0; i < h1Tags.length; i++) {
+    h1Tags[i].textContent = numbers[i];
+  }
+});
+    </script>
+</body>
+</html>

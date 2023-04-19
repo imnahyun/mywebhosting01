@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="output"></div> <!-- 결과 출력할 div 태그 추가 -->
+    <script>
+        let year = prompt('태어난 연도를 입력하세요.');
+        let zodiac = (year - 4) % 12; // 간단한 공식을 사용해 띠 계산하기
+        let zodiacs = ['원숭이', '닭', '개', '돼지', '쥐', '소', '범', '토끼', '용', '뱀', '말', '양'];
+        let outputDiv = document.getElementById('output');
+        outputDiv.innerText = '내가 태어난 연도는 ' + zodiacs[zodiac] + '띠입니다.'; // 결과 출력하기
+    </script>
+</body>
+</html>

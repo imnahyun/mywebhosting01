@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="one">
+    <input type="text" id="two">
+    <button id="add">더하기</button>
+    <button id="mul">곱하기</button>
+    <button id="dv_int">h</button>
+    <h1></h1>
+    <script>
+        let one = document.querySelector('#one')
+        let two = document.getElementById('two')
+        let add = document.querySelector('#add')
+        let mul = document.querySelector('#mul')
+        let result = document.querySelector('h1')
+
+        add.onclick = function () {
+            let num1 = one.value
+            let num2 = two.value
+            result.textContent = Number(num1) + Number(num2)
+        }
+        mul.onclick = () => {
+            let num1 = one.value
+            let num2 = two.value
+            result.textContent = Number(num1) * Number(num2)
+        }
+        /*
+        let dv = document.getElementById('dv')
+        function mydv() {
+            let num1 = one.value
+            let num2 = two.value
+            result.textContent = Number(num1) + Number(num2)
+        }
+        dv.onclick = mydv */
+
+        let dv_int = document.querySelector('#dv_int')
+        let myintdv = function () {
+            let num1 = one.value
+            let num2 = two.value
+            result.textContent =
+                math.floor(Number(num1) / Number(num2))
+        }
+        dv.int.onclick = myintdv
+
+        let mod = document.querySelector('#mod')
+        mod.addEventListener('click', () => {
+            let num1 = one.value
+            let num2 = two.value
+            result.textContent = Number(num1) % Number(num2)
+
+        })
+        mod.addEventListener =( 'click', function () {
+            alert('이벤트 추가 가능')
+        })
+    </script>
+</body>
+
+</html>

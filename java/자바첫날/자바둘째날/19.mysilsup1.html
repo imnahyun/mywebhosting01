@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="one">
+    <input type="text" id="two">
+    <button id="mainas">빼기</button>
+    <button id="nanugi">나누기</button>
+    <button id="namegi">나머지</button>
+    <h1></h1>
+    <script>
+        let one = document.querySelector('#one')
+        let two = document.getElementById('two')
+        let mainas = document.querySelector('#mainas')
+        let nanugi = document.querySelector('#nanugi')
+        let namegi = document.querySelector('#namegi')
+        let result = document.querySelector('h1')
+
+        mainas.onclick = function () {
+            let num1 = one.value
+            let num2 = two.value
+            if (!isNaN(num1) && !isNaN(num2)) {
+                result.textContent = num1 - num2
+            } else {
+                result.textContent = '숫자입력하시오'
+            }
+        }
+        nanugi.onclick = () => {
+            let num1 = one.value
+            let num2 = two.value
+            if (!isNaN(num1) && !isNaN(num2)) {
+                result.textContent = num1 / num2
+            } else {
+                result.textContent = '숫자입력하시오'
+            }
+        }
+        namegi.onclick = () => {
+            let num1 = one.value
+            let num2 = two.value
+            if (!isNaN(num1) && !isNaN(num2)) {
+                result.textContent = num1 % num2
+            } else {
+                result.textContent = '숫자입력하시오'
+            }
+        }
+
+    </script>
+</body>
+
+</html>

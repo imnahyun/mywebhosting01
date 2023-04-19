@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let year = prompt('태어난 연도를 입력하세요.');
+        let zodiac = (year - 4) % 12;
+        let zodiacs = [
+          {name: '원숭이', image: 'monkey.png'},
+          {name: '닭', image: 'rooster.png'},
+          {name: '개', image: 'dog.png'},
+          {name: '돼지', image: 'pig.png'},
+          {name: '쥐', image: 'rat.png'},
+          {name: '소', image: 'ox.png'},
+          {name: '범', image: 'tiger.png'},
+          {name: '토끼', image: 'rabbit.png'},
+          {name: '용', image: 'dragon.png'},
+          {name: '뱀', image: 'snake.png'},
+          {name: '말', image: 'horse.png'},
+          {name: '양', image: 'sheep.png'}
+        ];
+        let outputDiv = document.getElementById('output');
+        let outputText = '내가 태어난 연도는 ' + zodiacs[zodiac].name + '띠입니다.';
+        let outputImage = 'images/' + zodiacs[zodiac].image; // 이미지 파일 경로 설정
+        outputDiv.innerHTML = '<p>' + outputText + '</p>'; // 결과 텍스트 출력
+        document.getElementById('zodiac-image').src = outputImage; // 이미지 출력
+      </script>
+</body>
+</html>

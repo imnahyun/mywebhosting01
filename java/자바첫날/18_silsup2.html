@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1></h1>
+    <script>
+        // 태어난 연도를 입력받아 변수에 저장
+        let birthYear = prompt("태어난 연도를 입력하세요.");
+    
+        // 현재 연도 구하기
+        let currentYear = new Date().getFullYear();
+    
+        // 한국식 나이 계산
+        let koreanAge = currentYear - birthYear + 1;
+    
+        // 6월 이후의 나이 계산
+        let sixMonthsAge = currentYear - birthYear;
+        let currentMonth = new Date().getMonth() + 1;
+        if (currentMonth >= 6) {
+          sixMonthsAge += 1;
+        }
+    
+        // 결과 출력하기
+        let output = "한국식 나이는 " + koreanAge + "살이고, 6월 이후의 나이는 " + sixMonthsAge + "살입니다.";
+        document.querySelector("h1").textContent = output;
+      </script>
+      <h1></h1>
+    </body>
+    </html>

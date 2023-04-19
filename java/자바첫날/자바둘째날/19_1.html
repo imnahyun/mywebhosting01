@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>당신이 태어난 계절은?</h1>
+    <img src="" alt="">
+
+
+        <script>
+
+            let image = document.querySelector('img')
+
+            let mymonth = prompt('당신이 태어난 계절은 무슨 계절인가요?')
+
+            if (mymonth ==12 || mymonth ==1 || mymonth ==2)
+                image.src = '겨울.png'
+            else if (mymonth >= 3 && mymonth <= 5)
+                image.src = '봄.png'
+            else if (mymonth >= 6 && mymonth <= 8)
+                image.src = '여름.png'
+            else if (mymonth >= 9 && mymonth <= 11)
+                image.src = '가을.png'
+            else
+                image.src = '이상한거.png'
+        </script>
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+    <button id="ran_but">음식 랜덤뽑기</button>
+    <p>오늘의 메뉴는 <output id="menuOutput"></output>입니다.</p>
+    <img id="menuImage" src="" alt="음식 사진" />
+    <script>
+const menuList = ['짜장면', '햄버거', '냉면', '국밥','마라탕'];
+const ran_button = document.querySelector('#ran_but');
+const menuOut = document.querySelector('#menuOutput');
+ 
+ran_button.addEventListener('click', () => {
+  const randomIndex = Math.floor(Math.random() * menuList.length);
+  const selectedMenu = menuList[randomIndex];
+  menuOut.innerHTML = selectedMenu;
+  menuImage.src = `${selectedMenu}.jpg`;
+
+  switch (selectedMenu) {
+    case '짜장면':
+      menuImage.src = '짜장면.jpg';
+      menuImage.alt = '짜장면 사진';
+      break;
+    case '햄버거':
+      menuImage.src = '햄버거.jpg';
+      menuImage.alt = '햄버거 사진';
+      break;
+    case '냉면':
+      menuImage.src = '냉면.jpg';
+      menuImage.alt = '냉면 사진';
+      break;
+    case '국밥':
+      menuImage.src = '국밥.jpg';
+      menuImage.alt = '국밥 사진';
+      break;
+    case '마라탕':
+      menuImage.src = '마라탕.jpg';
+      menuImage.alt = '마라탕 사진';
+      break;
+  }
+});
+
+
+</script>
+</body>
+</html>

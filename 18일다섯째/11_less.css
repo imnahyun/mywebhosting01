@@ -1,0 +1,23 @@
+/*변수선언*/
+div {
+  height: 30px;
+}
+/*다컨은 레스에서 제공하는 기본함수,점점어두워지게함, 레스에 이렇게 만들어주면 이시레스라는 플러그인에서 컴파일한다음 css파일을 만들어준다.*/
+div:nth-child(1) {
+  background: #00ff00;
+}
+div:nth-child(2) {
+  background: #00cc00;
+}
+div:nth-child(3) {
+  background: #009900;
+}
+div:nth-child(4) {
+  background: #006600;
+}
+div:nth-child(5) {
+  background: #003300;
+}
+div:nth-child(6) {
+  background: #000000;
+}
